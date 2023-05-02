@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import s from './components/style.module.scss';
 import { ErrorBoundary } from './components/ErrorBoundary/ErrorBoundary';
 import { todoListSelector } from './store/reducer';
+import { ITask } from './types';
 
 function App() {
   const todoList = useSelector(todoListSelector);
@@ -19,7 +20,7 @@ function App() {
         <h1 className={s.todo__title}>{`Count all tasks - ${todoList.length}`}</h1>
 
         <Form />
-        {todoList.map((myTask) => {
+        {todoList.map((myTask:ITask) => {
           return <Todo key={myTask.id} myTask={myTask} />;
         })}
       </div>

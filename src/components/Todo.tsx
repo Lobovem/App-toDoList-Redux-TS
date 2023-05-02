@@ -1,8 +1,10 @@
 import { useDispatch } from 'react-redux';
 import s from './style.module.scss';
+import { ITask } from '../types';
+
 import { delete_todo, edit_todo, handle_check, set_change_edit_mode } from '../store/reducer';
 
-export function Todo({ myTask }) {
+export function Todo({ myTask }: { myTask: ITask }) {
   const dispatch = useDispatch();
 
   return (
