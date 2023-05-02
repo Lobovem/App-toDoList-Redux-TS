@@ -2,10 +2,10 @@ import { useEffect } from 'react';
 import { Form } from './components/Form';
 import { Todo } from './components/Todo';
 import { useSelector } from 'react-redux';
-import s from './components/style.module.scss';
-import { ErrorBoundary } from './components/ErrorBoundary/ErrorBoundary';
 import { todoListSelector } from './store/reducer';
 import { ITask } from './types';
+import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
+import s from './components/style.module.scss';
 
 function App() {
   const todoList = useSelector(todoListSelector);

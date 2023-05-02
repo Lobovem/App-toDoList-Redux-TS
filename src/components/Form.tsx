@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
-import s from './style.module.scss';
 import { add_todo, delete_all_complete_todo, input_change, userInputSelector } from '../store/reducer';
+import s from './style.module.scss';
 
 export function Form() {
   const dispatch = useDispatch();

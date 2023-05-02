@@ -1,10 +1,13 @@
 import { useDispatch } from 'react-redux';
-import s from './style.module.scss';
 import { ITask } from '../types';
-
 import { delete_todo, edit_todo, handle_check, set_change_edit_mode } from '../store/reducer';
+import s from './style.module.scss';
 
-export function Todo({ myTask }: { myTask: ITask }) {
+interface ITodoProps {
+  myTask: ITask;
+}
+
+  export const  Todo:React.FC<ITodoProps> =({ myTask })=> {
   const dispatch = useDispatch();
 
   return (
